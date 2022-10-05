@@ -12,21 +12,6 @@
 			<input type="hidden" name="voting_id" value="<?php echo $_GET['vid'] ?>">
 			<input type="hidden" name="id" value="<?php echo isset($id) ? $id :'' ?>">
 			<div class="form-group">
-				<label for="" class="control-label">Category</label>
-				<select name="category_id" id="" class="custom-select browser-default">
-					<?php 
-						$cats = $conn->query("SELECT * FROM category_list order by id asc");
-						while($row=$cats->fetch_assoc()):
-					?>
-					<option value="<?php echo $row['id'] ?>" <?php echo isset($category_id) && $category_id == $row['id'] ? 'selected' :'' ?>><?php echo $row['category'] ?></option>
-				<?php endwhile; ?>
-				</select>
-			</div>
-			<div class="form-group">
-				<label for="" class="control-label">Candidate Name</label>
-				<input type="text" class="form-control" name="opt_txt" value="<?php echo isset($opt_txt) ? $opt_txt :'' ?>">
-			</div>
-			<div class="form-group">
 				<label for="" class="control-label">Image</label>
 				<input type="file" class="form-control" name="img" onchange="displayImg(this,$(this))">
 			</div>
