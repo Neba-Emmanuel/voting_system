@@ -111,7 +111,7 @@ header("location:index.php?page=home");
 				if(resp == 1){
 					location.href ='index.php?page=home';
 				}else if(resp == 2){
-					location.href ='profile_pic.php';
+					location.href ='voting.php';
 				}else{
 					$('#login-form').prepend('<div class="alert alert-danger">Username or password is incorrect.</div>')
 					$('#login-form button[type="button"]').removeAttr('disabled').html('Submit');
