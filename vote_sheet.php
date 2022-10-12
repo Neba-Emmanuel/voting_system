@@ -63,6 +63,11 @@
 </style>
 <div class="container-fluid">
 	<div class="col-lg-12">
+	<div class="row">
+			<div class="col-md-12">
+				<button class="btn btn-primary btn-sm  col-md-2 float-right" id="add_pic">Add Pic</button>
+			</div>
+		</div>
 		<div class="card">
 			<div class="card-body">
 				<form action="" id="manage-vote">
@@ -118,6 +123,9 @@
 	</div>
 </div>
 <script>
+	$('#add_pic').click(function(){
+		uni_modal("Add Pic",'profile_pic.php?vid=<?php echo $_GET['id'] ?>')
+	})
 	$('.candidate').click(function(){
 		var chk = $(this).find('input[type="checkbox"]').prop("checked");
 		
